@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+
+    <style>
+        .container{
+            padding: 1rem;
+        }
+        .progress{
+            margin-bottom: 10px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <h3>Progreso de vacunación Colombia</h3>
+
+        <div class="row">
+            <div class="col-sm"><p>Datos extraidos de <a>https://covid.ourworldindata.org</a></p></div>
+            <div class="col-sm"><p>Última actualización <date id="date_update"></date></p></div>
+
+        </div>
+        
+
+        
+
+        <h5>Número total de personas que recibieron al menos una dosis de vacuna.</h5>
+        
+        <div class="progress">
+            <div id="vaccinedprogress" class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar"  ></div>
+        </div>
+
+        <h5>Número total de personas que recibieron todas las dosis prescritas por el protocolo de vacunación.</h5>
+        <div class="progress">
+            <div id="vaccinedprogress_fully" class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar"  ></div>
+        </div>
+
+    </div>
+
+    <script src="progresbar_vaccines.js"></script>
+</body>
+</html>
