@@ -8,7 +8,6 @@ fetch(URL_API)
     .then(data => {
         const colombia = data.find(x => x.iso_code == 'COL');
         const vaccined = colombia.data.slice(-1)[0]
-
         
         const percentPrint = `${vaccined.people_vaccinated_per_hundred}%`
         progressbar.style.width = percentPrint;
@@ -19,7 +18,5 @@ fetch(URL_API)
         progressbar_fully.innerHTML = percentPrint_fully;
 
         date_update.innerText = vaccined.date
-
         
-        console.log(progressbar, percentPrint, vaccined);
     })
