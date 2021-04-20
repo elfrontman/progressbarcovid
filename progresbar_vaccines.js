@@ -1,7 +1,10 @@
 const URL_API = "https://covid.ourworldindata.org/data/vaccinations/vaccinations.json";
+const URL_BACKEND = "https://progressbarcovid.herokuapp.com";
+
 const progressbar = document.getElementById('vaccinedprogress')
 const progressbar_fully = document.getElementById('vaccinedprogress_fully')
 const date_update = document.getElementById('date_update')
+const img_mapa = document.getElementById('img_mapa')
 
 fetch(URL_API)
     .then(response => response.json())
@@ -19,4 +22,15 @@ fetch(URL_API)
 
         date_update.innerText = vaccined.date
         
+    })
+
+    fetch(`${URL_BACKEND}/mapa`)
+    .then(response => response.json())
+        .then(data => {
+        
+            if (data.error) {
+                console.log(error)
+                return;
+            }
+            img_mapa.src = data.image
     })
